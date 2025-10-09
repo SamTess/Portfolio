@@ -22,18 +22,13 @@ jobs:
         run: npm ci
 
       - name: Build Next.js app
-        run: npm run build && npm run export
-
-      - name: Prepare deployment folder
-        run: |
-          rm -rf deploy
-          mv out deploy
+        run: npm run build
 
       - name: Push to external repo
         uses: peaceiris/actions-gh-pages@v4
         with:
           external_repository: SamTess/samtess.github.io
-          publish_dir: deploy
+          publish_dir: out
           publish_branch: main
           personal_token: ${{ secrets.TARGET_REPO_TOKEN }}
           user_name: github-actions[bot]
