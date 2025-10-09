@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { Project } from "@/data/projects";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ProjectCardProps {
   project: Project;
@@ -13,6 +14,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -24,16 +27,16 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         <CardHeader>
           <div className="flex justify-between items-start mb-2">
             <CardTitle className="text-xl group-hover:text-primary transition-colors">
-              {project.title}
+              {project.title[language]}
             </CardTitle>
             {project.featured && (
               <Badge variant="default" className="animate-pulse">
-                Featured
+                {language === 'fr' ? 'À la une' : 'Featured'}
               </Badge>
             )}
           </div>
           <CardDescription className="line-clamp-3">
-            {project.description}
+            {project.description[language]}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -62,7 +65,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                     rel="noopener noreferrer"
                   >
                     <Github className="w-4 h-4" />
-                    Code
+                    {language === 'fr' ? 'Code' : 'Code'}
                   </a>
                 </Button>
               )}
@@ -79,7 +82,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                     rel="noopener noreferrer"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Demo
+                    {language === 'fr' ? 'Démo' : 'Demo'}
                   </a>
                 </Button>
               )}

@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Target, Zap, Trophy, Activity } from "lucide-react";
-import Script from "next/script";
 
 interface HTBProfileCardProps {
   language: 'fr' | 'en';

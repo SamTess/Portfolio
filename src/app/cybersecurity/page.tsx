@@ -5,8 +5,7 @@ import { Shield, Award, Terminal, ChevronRight, ExternalLink, Calendar, Tag, Glo
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { certifications, walkthroughs, cyberSkills } from "@/data/cybersecurity";
+import { walkthroughs, cyberSkills } from "@/data/cybersecurity";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Link from "next/link";
 import HTBProfileCard from "@/components/HTBProfileCard";

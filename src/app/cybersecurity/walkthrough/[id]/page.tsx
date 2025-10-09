@@ -175,17 +175,17 @@ export default function WalkthroughPage() {
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw, rehypeSanitize]}
                   components={{
-                    h1: ({ node, ...props }) => (
+                    h1: (props) => (
                       <h1 className="text-3xl font-bold text-green-400 mb-4 mt-8" {...props} />
                     ),
-                    h2: ({ node, ...props }) => (
+                    h2: (props) => (
                       <h2 className="text-2xl font-bold text-cyan-400 mb-3 mt-6" {...props} />
                     ),
-                    h3: ({ node, ...props }) => (
+                    h3: (props) => (
                       <h3 className="text-xl font-semibold text-emerald-400 mb-2 mt-4" {...props} />
                     ),
-                    p: ({ node, ...props }) => <p className="text-gray-300 mb-4 leading-relaxed" {...props} />,
-                    code: ({ node, inline, className, ...props }: any) => {
+                    p: (props) => <p className="text-gray-300 mb-4 leading-relaxed" {...props} />,
+                    code: ({ inline, className, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) => {
                       // Déterminer le langage du bloc de code
                       const match = /language-(\w+)/.exec(className || '');
                       const language = match ? match[1] : '';
@@ -215,17 +215,17 @@ export default function WalkthroughPage() {
                         />
                       );
                     },
-                    pre: ({ node, ...props }) => (
+                    pre: (props) => (
                       <pre className="bg-gray-800 rounded-lg overflow-hidden mb-4" {...props} />
                     ),
-                    ul: ({ node, ...props }) => (
+                    ul: (props) => (
                       <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2" {...props} />
                     ),
-                    ol: ({ node, ...props }) => (
+                    ol: (props) => (
                       <ol className="list-decimal list-inside text-gray-300 mb-4 space-y-2" {...props} />
                     ),
-                    li: ({ node, ...props }) => <li className="text-gray-300" {...props} />,
-                    a: ({ node, ...props }) => (
+                    li: (props) => <li className="text-gray-300" {...props} />,
+                    a: (props) => (
                       <a
                         className="text-cyan-400 hover:text-cyan-300 underline transition-colors"
                         target="_blank"
@@ -233,13 +233,14 @@ export default function WalkthroughPage() {
                         {...props}
                       />
                     ),
-                    blockquote: ({ node, ...props }) => (
+                    blockquote: (props) => (
                       <blockquote
                         className="border-l-4 border-green-500 pl-4 italic text-gray-400 my-4"
                         {...props}
                       />
                     ),
-                    img: ({ node, ...props }) => (
+                    img: (props) => (
+                      // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
                       <img className="rounded-lg my-4 max-w-full h-auto" {...props} />
                     ),
                   }}

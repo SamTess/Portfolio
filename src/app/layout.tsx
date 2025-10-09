@@ -14,8 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Samuel Tesson - Développeur Full Stack",
+  title: "Samuel Tesson - Portfolio",
   description: "Portfolio de Samuel Tesson, développeur full stack passionné avec expertise en React, Node.js, et technologies modernes.",
+  icons: {
+    icon: [
+      {
+        url: "/logo.png",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
