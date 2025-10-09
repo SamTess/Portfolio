@@ -1,72 +1,72 @@
-# 🎨 Portfolio Moderne - Samuel Tesson
+# 🎨 Modern Portfolio - Samuel Tesson
 
-> Portfolio personnel multilingue développé avec Next.js 15, React 19, TypeScript et Tailwind CSS
+> Multilingual personal portfolio built with Next.js 15, React 19, TypeScript and Tailwind CSS
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8)](https://tailwindcss.com/)
 
-## 🚀 Démarrage Rapide
+## 🚀 Quick Start
 
 ```bash
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Lancer en développement
+# Start development server
 npm run dev
 ```
 
-Ouvrez [http://localhost:3000](http://localhost:3000) 🎉
+Open [http://localhost:3000](http://localhost:3000) 🎉
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-### 🎯 Principales
-- ✅ Design moderne et professionnel avec animations fluides
+### 🎯 Main Features
+- ✅ Modern and professional design with smooth animations
 - ✅ 100% Responsive (mobile, tablet, desktop)
-- ✅ Mode sombre/clair automatique
-- ✅ **Multilingue (FR/EN)** avec changement dynamique
-- ✅ Navigation sticky avec scroll smooth
-- ✅ SEO optimisé
+- ✅ Automatic dark/light mode
+- ✅ **Multilingual (FR/EN)** with dynamic switching
+- ✅ Sticky navigation with smooth scroll
+- ✅ SEO optimized
 
 ### 📄 Sections
-- ✅ **Hero** - Présentation avec lien caché vers la cybersécurité
-- ✅ **À propos** - Description personnelle
-- ✅ **Compétences** - Frontend, Backend, Outils (onglets)
-- ✅ **Expérience** - Avec logos d'entreprises
-- ✅ **Formation** - Avec logos d'écoles
-- ✅ **Projets** - Système extensible avec filtres
-- ✅ **Contact** - Liens sociaux et email
-- ✅ **Cybersécurité** - Section dédiée avec walkthroughs HTB (easter egg)
+- ✅ **Hero** - Introduction with hidden link to cybersecurity
+- ✅ **About** - Personal description
+- ✅ **Skills** - Frontend, Backend, Tools (tabs)
+- ✅ **Experience** - With company logos
+- ✅ **Education** - With school logos
+- ✅ **Projects** - Extensible system with filters
+- ✅ **Contact** - Social links and email
+- ✅ **Cybersecurity** - Dedicated section with HTB walkthroughs (easter egg)
 
 ### 🎨 Design
-- ✅ Logos d'entreprises et d'écoles dans les cartes
-- ✅ Badges et tags pour les technologies
-- ✅ Animations Framer Motion
-- ✅ Composants shadcn/ui
-- ✅ Icons Lucide React
+- ✅ Company and school logos in cards
+- ✅ Badges and tags for technologies
+- ✅ Framer Motion animations
+- ✅ shadcn/ui components
+- ✅ Lucide React icons
 
 ### 🔐 Easter Eggs
-- ✅ Lien caché "Cybersecurity" dans le titre Hero
-- ✅ Section cybersécurité accessible via `/cybersecurity`
-- ✅ Système de walkthroughs HackTheBox
+- ✅ Hidden "Cybersecurity" link in Hero title
+- ✅ Cybersecurity section accessible via `/cybersecurity`
+- ✅ HackTheBox walkthrough system
 
-## 🎯 Personnalisation Rapide
+## 🎯 Quick Customization
 
-### 1. Informations Personnelles
-Fichier : `src/data/translations.ts`
+### 1. Personal Information
+File: `src/data/translations.ts`
 ```typescript
 hero: {
-  greeting: "Salut, je suis",
-  // Modifier les traductions
+  greeting: "Hi, I'm",
+  // Modify translations
 }
 ```
 
-### 2. Ajouter des Projets
-Fichier : `src/data/projects.ts`
+### 2. Add Projects
+File: `src/data/projects.ts`
 ```typescript
 {
-  id: "mon-projet",
+  id: "my-project",
   title: {
     fr: "Mon Super Projet",
     en: "My Awesome Project"
@@ -82,8 +82,8 @@ Fichier : `src/data/projects.ts`
 }
 ```
 
-### 3. Ajouter des Expériences
-Fichier : `src/data/experiences.ts`
+### 3. Add Experience
+File: `src/data/experiences.ts`
 ```typescript
 {
   id: "1",
@@ -98,8 +98,8 @@ Fichier : `src/data/experiences.ts`
 }
 ```
 
-### 4. Ajouter des Formations
-Fichier : `src/data/education.ts`
+### 4. Add Education
+File: `src/data/education.ts`
 ```typescript
 {
   id: "1",
@@ -114,14 +114,14 @@ Fichier : `src/data/education.ts`
 }
 ```
 
-### 5. Ajouter des Logos
-Placez vos logos dans `/public/images/companies/`
-- Format : PNG ou JPEG
-- Taille recommandée : 60x60px minimum
-- Consultez [GUIDE_LOGOS_FORMATION.md](./GUIDE_LOGOS_FORMATION.md)
+### 5. Add Logos
+Place your logos in `/public/images/companies/`
+- Format: PNG or JPEG
+- Recommended size: 60x60px minimum
+- See [GUIDE_LOGOS_FORMATION.md](./GUIDE_LOGOS_FORMATION.md)
 
-### 6. Remplacer le CV
-Remplacez `public/cv.pdf` par votre CV
+### 6. Replace CV
+Replace `public/cv.pdf` with your CV
 
 ## 🛠️ Technologies
 
@@ -132,66 +132,66 @@ Remplacez `public/cv.pdf` par votre CV
 - **Styling** : Tailwind CSS 4
 
 ### UI & Animations
-- **Components** : shadcn/ui (Radix UI)
-- **Animations** : Framer Motion 12
-- **Icons** : Lucide React
+- **Components**: shadcn/ui (Radix UI)
+- **Animations**: Framer Motion 12
+- **Icons**: Lucide React
 
-### Fonctionnalités
-- **i18n** : Système custom multilingue (FR/EN)
-- **Markdown** : Support des walkthroughs HTB
-- **Images** : Next.js Image avec optimisation
+### Features
+- **i18n**: Custom multilingual system (FR/EN)
+- **Markdown**: HTB walkthroughs support
+- **Images**: Next.js Image with optimization
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 portfolio/
 ├── public/
-│   ├── cv.pdf                      # Votre CV
+│   ├── cv.pdf                      # Your CV
 │   ├── images/
-│   │   └── companies/              # Logos des entreprises/écoles
+│   │   └── companies/              # Company/school logos
 │   │       ├── action.jpeg
 │   │       ├── cml.jpeg
 │   │       ├── epitech.jpeg
-│   │       ├── ionis.png          # À ajouter
-│   │       └── universite-nantes.png # À ajouter
-│   └── walkthroughs/               # Fichiers Markdown HTB
+│   │       ├── ionis.png          # To be added
+│   │       └── universite-nantes.png # To be added
+│   └── walkthroughs/               # HTB Markdown files
 │       └── *.md
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx               # Page d'accueil
-│   │   ├── layout.tsx             # Layout global
-│   │   ├── globals.css            # Styles globaux
-│   │   └── cybersecurity/         # Section cybersécurité
+│   │   ├── page.tsx               # Home page
+│   │   ├── layout.tsx             # Global layout
+│   │   ├── globals.css            # Global styles
+│   │   └── cybersecurity/         # Cybersecurity section
 │   │       ├── page.tsx
 │   │       └── walkthrough/[id]/
 │   ├── components/
-│   │   ├── ui/                    # Composants shadcn/ui
-│   │   ├── LanguageToggle.tsx     # Toggle FR/EN
-│   │   ├── HTBProfileCard.tsx     # Carte profil HTB
+│   │   ├── ui/                    # shadcn/ui components
+│   │   ├── LanguageToggle.tsx     # FR/EN toggle
+│   │   ├── HTBProfileCard.tsx     # HTB profile card
 │   │   ├── ProjectCard.tsx
 │   │   ├── ExperienceCard.tsx
 │   │   └── EducationCard.tsx
 │   ├── contexts/
-│   │   └── LanguageContext.tsx    # Context multilingue
-│   ├── data/                      # 📝 DONNÉES À MODIFIER
-│   │   ├── translations.ts        # Traductions FR/EN
-│   │   ├── projects.ts            # Vos projets
-│   │   ├── experiences.ts         # Vos expériences
-│   │   ├── education.ts           # Vos formations
-│   │   ├── cybersecurity.ts       # Données cyber
-│   │   └── walkthroughs-metadata.ts # Métadonnées HTB
+│   │   └── LanguageContext.tsx    # Multilingual context
+│   ├── data/                      # 📝 DATA TO MODIFY
+│   │   ├── translations.ts        # FR/EN translations
+│   │   ├── projects.ts            # Your projects
+│   │   ├── experiences.ts         # Your experiences
+│   │   ├── education.ts           # Your education
+│   │   ├── cybersecurity.ts       # Cyber data
+│   │   └── walkthroughs-metadata.ts # HTB metadata
 │   └── lib/
-│       └── utils.ts               # Utilitaires
-├── GUIDE_*.md                     # Guides de personnalisation
-└── README.md                      # Ce fichier
+│       └── utils.ts               # Utilities
+├── GUIDE_*.md                     # Customization guides
+└── README.md                      # This file
 ```
 
-## 🌐 Système Multilingue
+## 🌐 Multilingual System
 
-Le portfolio supporte le français et l'anglais avec changement dynamique.
+The portfolio supports French and English with dynamic switching.
 
-### Ajouter une traduction
-Fichier : `src/data/translations.ts`
+### Add a translation
+File: `src/data/translations.ts`
 
 ```typescript
 export const translations = {
@@ -210,85 +210,85 @@ export const translations = {
 }
 ```
 
-Consultez [GUIDE_MULTILINGUE.md](./GUIDE_MULTILINGUE.md) pour plus de détails.
+See [GUIDE_MULTILINGUE.md](./GUIDE_MULTILINGUE.md) for more details.
 
-## 🔐 Section Cybersécurité
+## 🔐 Cybersecurity Section
 
-### Accès
-- URL directe : `/cybersecurity`
-- Easter egg : Cliquez sur "Cybersecurity" dans le titre Hero
+### Access
+- Direct URL: `/cybersecurity`
+- Easter egg: Click on "Cybersecurity" in the Hero title
 
-### Fonctionnalités
-- ✅ Profil HackTheBox
-- ✅ Statistiques et badges
-- ✅ Liste des walkthroughs
-- ✅ Rendu Markdown des solutions
+### Features
+- ✅ HackTheBox profile
+- ✅ Statistics and badges
+- ✅ Walkthrough list
+- ✅ Markdown rendering of solutions
 
-### Ajouter un walkthrough
-1. Créez un fichier `.md` dans `/public/walkthroughs/`
-2. Ajoutez les métadonnées dans `/src/data/walkthroughs-metadata.ts`
-3. Utilisez le template fourni
+### Add a walkthrough
+1. Create a `.md` file in `/public/walkthroughs/`
+2. Add metadata in `/src/data/walkthroughs-metadata.ts`
+3. Use the provided template
 
-Consultez [GUIDE_WALKTHROUGHS_AJOUT.md](./GUIDE_WALKTHROUGHS_AJOUT.md)
+See [GUIDE_WALKTHROUGHS_AJOUT.md](./GUIDE_WALKTHROUGHS_AJOUT.md)
 
-## 🚀 Déploiement
+## 🚀 Deployment
 
 
-### Déploiement Automatique via GitHub Actions
+### Automatic Deployment via GitHub Actions
 
-Ce projet utilise un workflow GitHub Actions pour construire et déployer automatiquement la version statique du portfolio sur le dépôt externe [`samtess.github.io`](https://github.com/SamTess/samtess.github.io).
+This project uses a GitHub Actions workflow to build and automatically deploy the static version of the portfolio to the external repository [`samtess.github.io`](https://github.com/SamTess/samtess.github.io).
 
-#### Fonctionnement
-- À chaque push sur `main`, le workflow :
-  - Installe les dépendances
-  - Build le projet Next.js
-  - Exporte la version statique (`out`)
-  - Pousse le dossier exporté sur le dépôt externe `samtess.github.io` (branche `main`)
+#### How it works
+- On each push to `main`, the workflow:
+  - Installs dependencies
+  - Builds the Next.js project
+  - Exports the static version (`out`)
+  - Pushes the exported folder to the external repository `samtess.github.io` (`main` branch)
 
 #### Configuration
-1. Ajoutez un secret `TARGET_REPO_TOKEN` dans les paramètres du dépôt, avec un token GitHub ayant accès en écriture au repo cible.
-2. Le workflow est défini dans `.github/workflows/deploy-to-external-repo.yml`.
+1. Add a `TARGET_REPO_TOKEN` secret in the repository settings, with a GitHub token that has write access to the target repo.
+2. The workflow is defined in `.github/workflows/deploy-to-external-repo.yml`.
 
-#### Déploiement manuel
-Vous pouvez toujours déployer localement :
+#### Manual deployment
+You can always deploy locally:
 ```bash
 npm run build && npm run export
-# Le dossier 'out' contient la version statique
+# The 'out' folder contains the static version
 ```
 
-### Déploiement Vercel (optionnel)
+### Vercel Deployment (optional)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
 ```bash
-# Installation CLI
+# CLI Installation
 npm i -g vercel
 
-# Déploiement
+# Deploy
 vercel
 ```
 
-### Variables d'Environnement
+### Environment Variables
 
-Créez un fichier `.env.local` si nécessaire :
+Create a `.env.local` file if needed:
 ```env
-# Exemple
-NEXT_PUBLIC_SITE_URL=https://votresite.com
+# Example
+NEXT_PUBLIC_SITE_URL=https://yoursite.com
 ```
 
-## 📝 Scripts Disponibles
+## 📝 Available Scripts
 
 ```bash
-npm run dev      # Mode développement (http://localhost:3000)
-npm run build    # Build pour production
-npm start        # Serveur production
-npm run lint     # Vérifier le code avec ESLint
+npm run dev      # Development mode (http://localhost:3000)
+npm run build    # Build for production
+npm start        # Production server
+npm run lint     # Check code with ESLint
 ```
 
-## 🎨 Personnalisation Avancée
+## 🎨 Advanced Customization
 
-### Couleurs et Thème
-Fichier : `src/app/globals.css`
+### Colors and Theme
+File: `src/app/globals.css`
 
 ```css
 :root {
@@ -296,18 +296,18 @@ Fichier : `src/app/globals.css`
   --foreground: 0 0% 3.9%;
   --primary: 0 0% 9%;
   --secondary: 0 0% 96.1%;
-  /* Modifiez selon vos préférences */
+  /* Modify according to your preferences */
 }
 
 .dark {
   --background: 0 0% 3.9%;
   --foreground: 0 0% 98%;
-  /* Mode sombre */
+  /* Dark mode */
 }
 ```
 
 ### Animations
-Les animations sont gérées par Framer Motion. Modifiez-les dans `src/app/page.tsx` :
+Animations are handled by Framer Motion. Modify them in `src/app/page.tsx`:
 
 ```typescript
 const fadeInUp = {
@@ -317,81 +317,54 @@ const fadeInUp = {
 };
 ```
 
-### Ajouter de Nouvelles Sections
-1. Créez le composant dans `src/components/`
-2. Importez-le dans `src/app/page.tsx`
-3. Ajoutez les traductions dans `src/data/translations.ts`
+### Add New Sections
+1. Create the component in `src/components/`
+2. Import it in `src/app/page.tsx`
+3. Add translations in `src/data/translations.ts`
 
-## 📚 Guides Détaillés
+## 🐛 Troubleshooting
 
-| Guide | Description |
-|-------|-------------|
-| [START_HERE.md](./START_HERE.md) | Point de départ - Vue d'ensemble |
-| [GUIDE_AJOUT_CONTENU.md](./GUIDE_AJOUT_CONTENU.md) | Ajouter projets, expériences, formations |
-| [GUIDE_MULTILINGUE.md](./GUIDE_MULTILINGUE.md) | Gérer les traductions FR/EN |
-| [GUIDE_LOGOS_FORMATION.md](./GUIDE_LOGOS_FORMATION.md) | Ajouter les logos d'entreprises/écoles |
-| [GUIDE_WALKTHROUGHS.md](./GUIDE_WALKTHROUGHS.md) | Système de walkthroughs HTB |
-| [GUIDE_CYBERSECURITE.md](./GUIDE_CYBERSECURITE.md) | Section cybersécurité |
-| [STRUCTURE.md](./STRUCTURE.md) | Architecture détaillée du projet |
+### Images not displaying
+- Check that files are in `/public/`
+- Path must start with `/` (e.g.: `/images/logo.png`)
+- Use Next.js `Image` component
 
-## 🐛 Résolution de Problèmes
+### Logos not displaying
+- Check file name (case-sensitive)
+- Ensure the path in the data matches the file
+- See [GUIDE_LOGOS_FORMATION.md](./GUIDE_LOGOS_FORMATION.md)
 
-### Les images ne s'affichent pas
-- Vérifiez que les fichiers sont bien dans `/public/`
-- Le chemin doit commencer par `/` (ex: `/images/logo.png`)
-- Utilisez le composant `Image` de Next.js
-
-### Les logos ne s'affichent pas
-- Vérifiez le nom du fichier (sensible à la casse)
-- Assurez-vous que le chemin dans les données correspond au fichier
-- Consultez [GUIDE_LOGOS_FORMATION.md](./GUIDE_LOGOS_FORMATION.md)
-
-### Erreur de build
+### Build error
 ```bash
-# Nettoyez le cache
+# Clear cache
 rm -rf .next
 npm run build
 ```
 
-### Le changement de langue ne fonctionne pas
-- Vérifiez que toutes les clés existent dans les deux langues
-- Consultez [GUIDE_MULTILINGUE.md](./GUIDE_MULTILINGUE.md)
+### Language switching not working
+- Check that all keys exist in both languages
+- See [GUIDE_MULTILINGUE.md](./GUIDE_MULTILINGUE.md)
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-Ce portfolio est un projet personnel, mais n'hésitez pas à :
-- Signaler des bugs
-- Proposer des améliorations
-- Créer une issue sur GitHub
+This portfolio is a personal project, but feel free to:
+- Report bugs
+- Suggest improvements
+- Create an issue on GitHub
 
 ## 📧 Contact
 
-- **Email** : samuel.tesson@epitech.eu
-- **GitHub** : [@SamTess](https://github.com/SamTess)
-- **LinkedIn** : [Samuel Tesson](https://linkedin.com/in/samuel-tesson)
-- **Portfolio** : [https://samuel-tesson.com](https://samuel-tesson.com)
+- **Email**: samuel.tesson@epitech.eu
+- **GitHub**: [@SamTess](https://github.com/SamTess)
+- **LinkedIn**: [Samuel Tesson](https://linkedin.com/in/samuel-tesson)
+- **Portfolio**: [https://samuel-tesson.com](https://samuel-tesson.com)
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est libre d'utilisation pour un usage personnel et éducatif.
-
----
-
-## 🎯 Checklist de Personnalisation
-
-- [ ] Modifier les informations personnelles dans `src/data/translations.ts`
-- [ ] Ajouter vos projets dans `src/data/projects.ts`
-- [ ] Ajouter vos expériences dans `src/data/experiences.ts`
-- [ ] Ajouter vos formations dans `src/data/education.ts`
-- [ ] Remplacer `public/cv.pdf` par votre CV
-- [ ] Ajouter les logos dans `public/images/companies/`
-- [ ] Personnaliser les couleurs dans `src/app/globals.css`
-- [ ] Tester le mode responsive
-- [ ] Tester le changement de langue FR/EN
-- [ ] Déployer sur Vercel
+This project is free to use for personal and educational purposes.
 
 ---
 
-**Fait avec ❤️ et ☕ par Samuel Tesson**
+**Made with ❤️ and ☕ by Samuel Tesson**
 
-Pour commencer, consultez **[START_HERE.md](./START_HERE.md)** ! 🚀
+To get started, check out **[START_HERE.md](./START_HERE.md)** ! 🚀
