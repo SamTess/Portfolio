@@ -47,7 +47,7 @@ export default function Home() {
             >
               ST
             </motion.h1>
-            
+
             {/* Desktop Navigation */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -80,33 +80,33 @@ export default function Home() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[250px]">
                   <div className="flex flex-col gap-4 mt-8">
-                    <Button 
-                      variant="ghost" 
-                      asChild 
+                    <Button
+                      variant="ghost"
+                      asChild
                       className="justify-start"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <a href="#about">{t.nav.about}</a>
                     </Button>
-                    <Button 
-                      variant="ghost" 
-                      asChild 
+                    <Button
+                      variant="ghost"
+                      asChild
                       className="justify-start"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <a href="#experience">{t.nav.experience}</a>
                     </Button>
-                    <Button 
-                      variant="ghost" 
-                      asChild 
+                    <Button
+                      variant="ghost"
+                      asChild
                       className="justify-start"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <a href="#projects">{t.nav.projects}</a>
                     </Button>
-                    <Button 
-                      variant="ghost" 
-                      asChild 
+                    <Button
+                      variant="ghost"
+                      asChild
                       className="justify-start"
                       onClick={() => setIsMenuOpen(false)}
                     >
