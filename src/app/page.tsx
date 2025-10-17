@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ExternalLink, Code2, Briefcase, GraduationCap, Award } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink, Code2, Briefcase, GraduationCap, Award, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { projects } from "@/data/projects";
 import { experiences } from "@/data/experiences";
 import { educationList } from "@/data/education";
@@ -14,9 +15,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
   const { t, language } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -44,10 +47,12 @@ export default function Home() {
             >
               ST
             </motion.h1>
+            
+            {/* Desktop Navigation */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex gap-4 items-center"
+              className="hidden md:flex gap-4 items-center"
             >
               <LanguageToggle />
               <Button variant="ghost" asChild>
@@ -63,6 +68,54 @@ export default function Home() {
                 <a href="#contact">{t.nav.contact}</a>
               </Button>
             </motion.div>
+
+            {/* Mobile Navigation */}
+            <div className="flex md:hidden items-center gap-2">
+              <LanguageToggle />
+              <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[250px]">
+                  <div className="flex flex-col gap-4 mt-8">
+                    <Button 
+                      variant="ghost" 
+                      asChild 
+                      className="justify-start"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <a href="#about">{t.nav.about}</a>
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      asChild 
+                      className="justify-start"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <a href="#experience">{t.nav.experience}</a>
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      asChild 
+                      className="justify-start"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <a href="#projects">{t.nav.projects}</a>
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      asChild 
+                      className="justify-start"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <a href="#contact">{t.nav.contact}</a>
+                    </Button>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </nav>
@@ -85,19 +138,11 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-muted-foreground">
               {language === 'fr' ? (
                 <>
-                  Étudiant - Software &{" "}
-                  <Link href="/cybersecurity" className="hover:underline hover:text-primary transition-colors cursor-pointer">
-                    Cybersecurity
-                  </Link>{" "}
-                  Engineer
+                  Étudiant - Software & Cybersecurity Engineer
                 </>
               ) : (
                 <>
-                  Student - Software &{" "}
-                  <Link href="/cybersecurity" className="hover:underline hover:text-primary transition-colors cursor-pointer">
-                    Cybersecurity
-                  </Link>{" "}
-                  Engineer
+                  Student - Software & Cybersecurity Engineer
                 </>
               )}
             </p>
@@ -244,7 +289,7 @@ export default function Home() {
             {experiences.map((exp) => (
               <Card key={exp.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="flex justify-between items-start gap-4">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                     <div className="flex items-start gap-4 flex-1">
                       {exp.logo && (
                         <div className="flex-shrink-0">
@@ -258,11 +303,11 @@ export default function Home() {
                         </div>
                       )}
                       <div className="flex-1">
-                        <CardTitle className="text-2xl">{exp.role[language]}</CardTitle>
+                        <CardTitle className="text-xl md:text-2xl">{exp.role[language]}</CardTitle>
                         <CardDescription className="text-base mt-1">{exp.company[language]}</CardDescription>
                       </div>
                     </div>
-                    <Badge variant="outline" className="flex-shrink-0">{exp.period[language]}</Badge>
+                    <Badge variant="outline" className="flex-shrink-0 self-start">{exp.period[language]}</Badge>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -295,7 +340,7 @@ export default function Home() {
             {educationList.map((edu) => (
               <Card key={edu.id}>
                 <CardHeader>
-                  <div className="flex justify-between items-start gap-4">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                     <div className="flex items-start gap-4 flex-1">
                       {edu.logo && (
                         <div className="flex-shrink-0">
@@ -309,11 +354,11 @@ export default function Home() {
                         </div>
                       )}
                       <div className="flex-1">
-                        <CardTitle className="text-2xl">{edu.degree[language]}</CardTitle>
+                        <CardTitle className="text-xl md:text-2xl">{edu.degree[language]}</CardTitle>
                         <CardDescription className="text-base mt-1">{edu.school[language]}</CardDescription>
                       </div>
                     </div>
-                    <Badge variant="outline" className="flex-shrink-0">{edu.period[language]}</Badge>
+                    <Badge variant="outline" className="flex-shrink-0 self-start">{edu.period[language]}</Badge>
                   </div>
                 </CardHeader>
                 <CardContent>
